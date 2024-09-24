@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Email: <input type="email" name="email" required>
     Senha: <input type="password" name="senha" required>
     <input type="submit" value="Login">
-    <a href="src/loginAluno.php">aluno acessa aqui!</a>
+    <a href="src/loginAluno.php">Acessar a área de alunos!</a>
 </form>  
 </body>
 </html>
