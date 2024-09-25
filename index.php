@@ -1,6 +1,7 @@
 <?php
 session_start();
 require './conexao/conexao.php'; // Arquivo para conectar ao banco de dados
+$error = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -17,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: src/dashboard.php");
         exit();
     } else {
-        echo "Email ou senha inválidos!";
+         $error = "Email ou senha inválidos!";
        
     }
 }
@@ -27,16 +28,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Professor</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <form method="POST">
-    <h1>entre como professor</h1>
-    Email: <input type="email" name="email" required>
-    Senha: <input type="password" name="senha" required>
-    <input type="submit" value="Login">
-    <a href="src/loginAluno.php">Acessar a área de alunos!</a>
+  <img class="senai"src="img/SenaiLogo.png" alt="Senai">
+
+    <h2>Área do Professor 👨‍💻</h2>
+    <input type="email" name="email" placeholder="E-mail"  required>
+    <input type="password" name="senha" placeholder="Senha" required>
+    <input class="button" type="submit" value="Login">
+    
+    <div class="esqueceuSenha">
+        <a href="src/loginAluno.php">Acessar a área de alunos!</a>
+    </div>    
+    <?php if(isset($error)): ?>
+        <p class="error"> <?php echo $error ?></p>
+        <?php endif ?>
 </form>  
 </body>
 </html>

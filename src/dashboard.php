@@ -10,11 +10,16 @@ if (!isset($_SESSION['professor_id'])) {
 // Lógica para exibir notas ou adicionar nova nota
 ?>
 
-<h1>Painel do Professor</h1>
 
-<a href="adicionar_Nota.php">Adicionar Nota</a>
-<a href="registrarAluno.php">Registrar aluno</a>
-<a href="sair.php">Sair</a>
+<header>
+    <h1>Painel das Notas dos Alunos</h1>
+    <ul>
+        <li><a href="adicionar_Nota.php">Adicionar Nota</a></li>
+        <li><a href="registrarAluno.php">Registrar aluno</a></li>
+        <li><a href="sair.php">Sair</a></li>
+    </ul>
+</header>
+
 
 <table>
     <tr>
@@ -34,8 +39,28 @@ if (!isset($_SESSION['professor_id'])) {
             <td>{$nota['disciplina']}</td>
             <td>{$nota['nota']}</td>
             <td>{$nota['data']}</td>
-            <td><a href='editarNota.php?id={$nota['id']}'>Editar</a></td>
+
+            <td><div  class='icone' >
+            <a href='editarNota.php?id={$nota['id']}'>  
+            <i class='fa-solid fa-pen'></i> Editar </a>
+            </div> </td>
         </tr>";
     }
     ?>
 </table>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+</body>
+</html>
