@@ -11,15 +11,37 @@ if (!isset($_SESSION['professor_id'])) {
 ?>
 
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../script/dashboard.js" defer></script>
+</head>
+
+<body>
 <div class="conteudo">
     <header>
         <h1>Notas dos Alunos</h1>
-        <ul>
+        <ul class = "desktop">
             <li><a href="adicionar_Nota.php">Adicionar Nota</a></li>
             <li><a href="registrarAluno.php">Registrar aluno</a></li>
             <li><a href="sair.php">Sair</a></li>
         </ul>
-
+         <button class= "menu">&#9776;</button>
+        <ul class = "mobile">
+            <li><a href="adicionar_Nota.php">Adicionar Nota</a></li>
+            <li><a href="registrarAluno.php">Registrar aluno</a></li>
+            <li><a href="sair.php">Sair</a></li>
+        </ul>
+   
     </header>
 
 
@@ -53,21 +75,6 @@ if (!isset($_SESSION['professor_id'])) {
         ?>
     </table>
 </div>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/Dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="../script/dashboard.js" defer></script>
-</head>
-
-<body>
 
 </body>
 

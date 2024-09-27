@@ -82,7 +82,9 @@ form {
     }
 
 }
-
+.showMenu{
+    display: block;
+}
 
 @media (max-width:535px) {
     body {

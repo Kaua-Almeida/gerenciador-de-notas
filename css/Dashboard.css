@@ -29,7 +29,7 @@ header {
     ul {
         list-style: none;
         display: flex;
-        gap: 15px;
+        gap: 30px;
 
         li {
             text-transform: capitalize;
@@ -52,7 +52,22 @@ header {
         color: rgba(255, 255, 255, 0.781);
     }
 }
-
+.menu{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 26px;
+    height: 30px;
+    display: none;
+    padding-top: 5px;
+}
+.mobile{
+    display: none;
+}
+.close{
+    display: flex;
+  
+}
 table {
     width: 90%;
     border-collapse: collapse;
@@ -103,7 +118,7 @@ td {
 @media (max-width:665px) {
     .conteudo {
 
-        width: 100% !important;
+        width: 100%;
     }
 
     h1 {
@@ -140,7 +155,15 @@ td {
     h1 {
         font-size: 20px;
     }
-    li{
+    .desktop{
         display: none;
+    }
+   
+    h1{
+       margin: auto;
+    }
+
+    .menu{
+        display: flex;
     }
 }
