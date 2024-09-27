@@ -1,6 +1,7 @@
 <?php
 require '../conexao/conexao.php';
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -17,9 +18,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<form method="POST" action="registrarAluno.php">
-    Nome: <input type="text" name="nome" required>
-    Email: <input type="email" name="email" required>
-    Senha: <input type="password" name="senha" required>
-    <input type="submit" value="Registrar">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrar Aluno</title>
+        <link rel="stylesheet" href="../css/RegistrarAluno.css">
+
+    </head>
+    <body>
+        <img class="senai"src="../img/SenaiLogo.png" alt="">
+    
+        <form method="POST" action="registrarAluno.php">
+        <h1>Registro de alunos</h1>
+        Nome: <input type="text" name="nome" required>
+        Email: <input type="email" name="email" required>
+        Senha: <input type="password" name="senha" required>
+        <input type="submit" value="Registrar">
+    </form>
+    
+</body>
+</html>

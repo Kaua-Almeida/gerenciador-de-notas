@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alunos` (
-  `id` int(11) NOT NULL,
+  `id` int(11)  AUTO_INCREMENT NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(255) NOT NULL
@@ -50,7 +50,7 @@ INSERT INTO `alunos` (`id`, `nome`, `email`, `senha`) VALUES
 --
 
 CREATE TABLE `notas` (
-  `id` int(11) NOT NULL,
+  `id` int(11) AUTO_INCREMENT NOT NULL,
   `aluno_id` int(11) NOT NULL,
   `professor_id` int(11) NOT NULL,
   `disciplina` varchar(100) NOT NULL,
@@ -74,7 +74,7 @@ INSERT INTO `notas` (`id`, `aluno_id`, `professor_id`, `disciplina`, `nota`, `da
 --
 
 CREATE TABLE `professores` (
-  `id` int(11) NOT NULL,
+  `id` int(11) AUTO_INCREMENT NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(255) NOT NULL

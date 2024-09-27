@@ -26,23 +26,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Nota</title>
+    <link rel="stylesheet" href="../css/AdicionarNota.css">
 
-<form method="POST" action="adicionar_nota.php">
-    Aluno:
-    <select name="aluno_id" required>
-        <option value="">Selecione um aluno</option>
-        <?php foreach ($alunos as $aluno): ?>
-            <option value="<?= htmlspecialchars($aluno['id']) ?>">
-                <?= htmlspecialchars($aluno['nome']) ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-    <br>
-    Disciplina: <input type="text" name="disciplina" required>
-    <br>
-    Nota: <input type="number" step="0.01" name="nota" required>
-    <br>
-    Data: <input type="date" name="data" required>
-    <br>
-    <input type="submit" value="Adicionar Nota">
-</form>
+</head>
+<body>
+    
+    <form method="POST" action="adicionar_nota.php">
+        <h1>Adicionar Nota</h1>
+        <label for="aluno">Aluno:</label>
+        <select name="aluno_id" id="aluno" required>
+            <option value="">Selecione um aluno</option>
+            <?php foreach ($alunos as $aluno): ?>
+                <option value="<?= htmlspecialchars($aluno['id']) ?>">
+                    <?= htmlspecialchars($aluno['nome']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <br>
+
+        <label for="disciplina">Disciplina:</label>
+        <input type="text" name="disciplina" id="disciplina" required>
+        <br>
+
+        <label for="nota">Nota:</label>
+        <input type="number" step="0.01" name="nota" id="nota" required>
+        <br>
+
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data" required>
+        <br>
+
+        <input type="submit" value="Adicionar Nota">
+    </form>
+</body>
+</html>
+
