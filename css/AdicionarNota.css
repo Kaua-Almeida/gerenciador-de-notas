@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins";
 }
+
 body {
     margin-top: 150px;
     background: linear-gradient(-8deg, #ddf4f8, #0b4ea5);
@@ -27,7 +28,7 @@ form {
     border-radius: 10px;
     max-width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    box-shadow:inset 1px 1px 10px #b9b9b9;
+    box-shadow: inset 1px 1px 10px #b9b9b9;
 }
 
 label {
@@ -36,9 +37,9 @@ label {
     color: #333;
 }
 
-input[type="text"], 
-input[type="number"], 
-input[type="date"], 
+input[type="text"],
+input[type="number"],
+input[type="date"],
 select {
     width: 100%;
     padding: 10px;
@@ -46,7 +47,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 1px 1px 4px #a1a1a1;
-    box-shadow:inset 1px 1px 7px #b9b9b9;
+    box-shadow: inset 1px 1px 7px #b9b9b9;
 }
 
 input[type="submit"] {
@@ -60,3 +61,8 @@ input[type="submit"] {
     font-size: 16px;
 }
 
+@media (max-width:450px) {
+    form {
+        max-width: 90%;
+    }
+}

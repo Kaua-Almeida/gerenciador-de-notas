@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,23 +32,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
+
 <body>
- <form method="POST">
-    <img class="senai"src="../img/SenaiLogo.png" alt="">
+    <form method="POST">
+        <img class="senai" src="../img/SenaiLogo.png" alt="">
 
-    <h2>Área do Aluno 😎</h2>
-    <input type="email" name="email" placeholder="E-mail"  required>
-    <input type="password" name="senha" placeholder="Senha" required>
-    <input class="button" type="submit" value="Login">
-    <div class="esqueceuSenha">
-    <a href="../index.php">Acessar a área dos professores!</a>
-    </div>    
-    <?php if(isset($error)): ?>
-        <p> <?php echo $error ?></p>
+        <h2>Área do Aluno 😎</h2>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input class="button" type="submit" value="Login">
+        <div class="esqueceuSenha">
+            <a href="../index.php">Acessar os professores!</a>
+        </div>
+        <?php if (isset($error)): ?>
+            <p> <?php echo $error ?></p>
         <?php endif ?>
-</form>  
+    </form>
 
-</form>   
+    </form>
 </body>
-</html>
 
+</html>

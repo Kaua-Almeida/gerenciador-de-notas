@@ -27,7 +27,7 @@ form {
     width: 90%;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    box-shadow:inset 1px 1px 10px #b9b9b9;
+    box-shadow: inset 1px 1px 10px #b9b9b9;
 }
 
 form:hover {
@@ -88,9 +88,10 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 500px) {
-    img{
+    img {
         width: 250px;
     }
+
     form {
         padding: 20px;
     }
