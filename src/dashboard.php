@@ -15,7 +15,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@ if (!isset($_SESSION['professor_id'])) {
     <header>
         <h1>Notas dos Alunos</h1>
         <ul class = "desktop">
-            <li><a href="adicionar_Nota.php">Adicionar Nota</a></li>
+            <li><a href="adicionarNota.php">Adicionar Nota</a></li>
             <li><a href="registrarAluno.php">Registrar aluno</a></li>
             <li><a href="sair.php">Sair</a></li>
         </ul>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['professor_id'])) {
         </tr>
         <?php
         $professor_id = $_SESSION['professor_id'];
-        $stmt = $conn->prepare("SELECT * FROM Notas JOIN Alunos ON Notas.aluno_id = Alunos.id WHERE professor_id = ?");
+        $stmt = $conn->prepare("SELECT * FROM Notas JOIN alunos ON notas.aluno_id = alunos.id WHERE professor_id = ?");
         $stmt->execute([$professor_id]);
         while ($nota = $stmt->fetch()) {
             echo "<tr>

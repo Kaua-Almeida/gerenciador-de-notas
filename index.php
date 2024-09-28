@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha = $_POST['senha'];
 
     // Consulta ao banco de dados
-    $stmt = $conn->prepare("SELECT * FROM Professores WHERE email = ?");
+    $stmt = $conn->prepare("SELECT * FROM professores WHERE email = ?");
     $stmt->execute([$email]);
     $professor = $stmt->fetch();
 

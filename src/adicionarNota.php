@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = $_POST['data'];
     $professor_id = $_SESSION['professor_id'];
 
-    $stmt = $conn->prepare("INSERT INTO Notas (aluno_id, professor_id, disciplina, nota, data) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO notas (aluno_id, professor_id, disciplina, nota, data) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$aluno_id, $professor_id, $disciplina, $nota, $data]);
 
     header("Location: dashboard.php");
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     
-    <form method="POST" action="adicionar_nota.php">
+    <form method="POST">
         <h1>Adicionar Nota</h1>
         <label for="aluno">Aluno:</label>
         <select name="aluno_id" id="aluno" required>

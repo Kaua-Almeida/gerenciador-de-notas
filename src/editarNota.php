@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $nota = $_POST['nota'];
 
-    $stmt = $conn->prepare("UPDATE Notas SET nota = ? WHERE id = ?");
+    $stmt = $conn->prepare("UPDATE notas SET nota = ? WHERE id = ?");
     $stmt->execute([$nota, $id]);
 
     header("Location: dashboard.php");
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $id = $_GET['id'];
-$stmt = $conn->prepare("SELECT * FROM Notas WHERE aluno_id = ?");
+$stmt = $conn->prepare("SELECT * FROM notas WHERE aluno_id = ?");
 $stmt->execute([$id]);
 $nota = $stmt->fetch();
 

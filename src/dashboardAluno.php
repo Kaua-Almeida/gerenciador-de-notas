@@ -8,6 +8,20 @@ if (!isset($_SESSION['aluno_id'])) {
 }
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peinel das Notas</title>
+    <link rel="stylesheet" href="../css/Dashboard.css">
+
+</head>
+
+<body>
 <div class="conteudo">
 
     <header>
@@ -28,7 +42,7 @@ if (!isset($_SESSION['aluno_id'])) {
 
         <?php
         $aluno_id = $_SESSION['aluno_id'];
-        $stmt = $conn->prepare("SELECT * FROM Notas JOIN Alunos ON Notas.aluno_id = alunos.id");
+        $stmt = $conn->prepare("SELECT * FROM notas JOIN alunos ON notas.aluno_id = alunos.id");
         $stmt->execute();
 
         while ($nota = $stmt->fetch()) {
@@ -45,20 +59,6 @@ if (!isset($_SESSION['aluno_id'])) {
 
     </table>
 </div>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peinel das Notas</title>
-    <link rel="stylesheet" href="../css/Dashboard.css">
-
-</head>
-
-<body>
-
 </body>
 
 </html>

@@ -11,15 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
    
-    $stmt = $conn->prepare("INSERT INTO Alunos (nome, email, senha) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO alunos (nome, email, senha) VALUES (?, ?, ?)");
     $stmt->execute([$nome, $email, $senha_hash]);
-
+    header("Location: dashboard.php");
     echo "Aluno registrado com sucesso!";
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

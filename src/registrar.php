@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     // Inserir no banco de dados
-    $stmt = $conn->prepare("INSERT INTO Professores (nome, email, senha) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO professores (nome, email, senha) VALUES (?, ?, ?)");
     $stmt->execute([$nome, $email, $senha_hash]);
 
     echo "Professor registrado com sucesso!";
